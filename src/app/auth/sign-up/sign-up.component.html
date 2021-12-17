@@ -1,0 +1,98 @@
+<main>
+    <section class="py-5 text-center middle">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light text-white">{{ "AUTH.SIGN_UP" | translate }}</h1>
+      </div>
+    </section>
+    <section class="py-5 d-flex justify-content-center">
+      <form
+        (ngSubmit)="signUp(form)"
+        #form="ngForm"
+        [mustMatch]="['password', 'repeatPassword']"
+        [validEmailFormat]="'email'"
+      >
+        <div class="form-floating mb-2">
+          <input
+            type="email"
+            ngModel
+            name="email"
+            #email="ngModel"
+            class="form-control"
+            id="floatingInput"
+            required
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput">{{ "AUTH.EMAIL" | translate }}</label>
+        </div>
+        <div class="form-floating mb-2">
+          <input
+            type="password"
+            ngModel
+            name="password"
+            #password="ngModel"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+            required
+          />
+          <label for="floatingPassword">{{ "AUTH.PASSWORD" | translate }}</label>
+        </div>
+        <div class="form-floating mb-2">
+          <input
+            type="password"
+            class="form-control"
+            name="repeatPassword"
+            ngModel
+            #repeatPassword="ngModel"
+            id="floatingRepeatPassword"
+            placeholder="Password"
+            required
+          />
+          <label for="floatingRepeatPassword">{{
+            "AUTH.REPEAT_PASSWORD" | translate
+          }}</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-outline-secondary" type="submit">
+          {{ "AUTH.SIGN_UP" | translate }}
+        </button>
+        <ng-container *ngIf="form.submitted && form.invalid">
+          <div
+            class="alert alert-danger mt-3 mb-2"
+            role="alert"
+            *ngIf="form.controls.email?.errors?.required"
+          >
+            {{ "AUTH.EMAIL_REQUIRED" | translate }}
+          </div>
+          <div
+            class="alert alert-danger mt-1"
+            role="alert"
+            *ngIf="form.controls.email?.errors?.isInvalidEmailFormat"
+            >
+            {{ "AUTH.EMAIL_INVALID_FORMAT" | translate }}
+          </div>
+          <div
+            class="alert alert-danger mt-1"
+            role="alert"
+            *ngIf="form.controls.password?.errors?.required"
+          >
+            {{ "AUTH.PASSWORD_REQUIRED" | translate }}
+          </div>
+          <div
+            class="alert alert-danger mt-1"
+            role="alert"
+            *ngIf="form.controls.repeatPassword?.errors?.required"
+          >
+            {{ "AUTH.REPEAT_PASSWORD_REQUIRED" | translate }}
+          </div>
+          <div
+            class="alert alert-danger mt-1"
+            role="alert"
+            *ngIf="form.controls.repeatPassword?.errors?.mustMatch"
+          >
+            {{ "AUTH.PASSWORDS_MUST_MATCH" | translate }}
+          </div>
+        </ng-container>
+      </form>
+    </section>
+  </main>
+  

@@ -1,0 +1,67 @@
+<main>
+    <section class="py-5 text-center middle">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light text-white">{{ "AUTH.SIGN_IN" | translate }}</h1>
+      </div>
+    </section>
+    <section class="py-5 d-flex justify-content-center">
+      <form 
+        (ngSubmit)="signIn(form.value)" 
+        #form="ngForm" 
+        [validEmailFormat]="'email'"
+        >
+        <div class="form-floating mb-2">
+          <input
+            type="email"
+            class="form-control"
+            ngModel
+            name="email"
+            #email="ngModel"
+            required
+            id="floatingInput"
+            placeholder=" "
+          />
+          <label for="floatingInput">{{ "AUTH.EMAIL" | translate }}</label>
+        </div>
+        <div class="form-floating mb-2">
+          <input
+            type="password"
+            class="form-control"
+            ngModel
+            required
+            name="password"
+            id="floatingPassword"
+            placeholder=" "
+          />
+          <label for="floatingPassword">{{ "AUTH.PASSWORD" | translate }}</label>
+        </div>
+        <button class="w-100 btn btn-lg btn-outline-secondary" type="submit">
+          {{ "AUTH.SIGN_IN" | translate }}
+        </button>
+        <ng-container *ngIf="form.submitted && form.invalid">
+          <div
+            class="alert alert-danger mt-3 mb-2"
+            role="alert"
+            *ngIf="form.controls.email?.errors?.required"
+          >
+            {{ "AUTH.EMAIL_REQUIRED" | translate }}
+          </div>
+          <div
+            class="alert alert-danger mt-1"
+            role="alert"
+            *ngIf="form.controls.email?.errors?.isInvalidEmailFormat"
+            >
+            {{ "AUTH.EMAIL_INVALID_FORMAT" | translate }}
+          </div>
+          <div
+            class="alert alert-danger mt-1"
+            role="alert"
+            *ngIf="form.controls.password?.errors?.required"
+          >
+            {{ "AUTH.PASSWORD_REQUIRED" | translate }}
+          </div>
+        </ng-container>
+      </form>
+    </section>
+  </main>
+  

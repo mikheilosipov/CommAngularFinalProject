@@ -1,0 +1,14 @@
+{
+    "SHELL.TITLE": "მთავარი",
+    "AUTH.SIGN_IN": "შესვლა",
+    "AUTH.SIGN_UP": "რეგისტრაცია",
+    "AUTH.SIGN_OUT": "გამოსვლა",
+    "AUTH.EMAIL": "ელ. ფოსტა",
+    "AUTH.PASSWORD": "პაროლი",
+    "AUTH.REPEAT_PASSWORD": "გაიმეორეთ პაროლი",
+    "AUTH.EMAIL_REQUIRED": "ელ. ფოსტა სავალდებულოა",
+    "AUTH.EMAIL_INVALID_FORMAT": "ელ. ფოსტის ფორმატი არასწორია",
+    "AUTH.PASSWORD_REQUIRED": "პაროლი სავალდებულოა",
+    "AUTH.REPEAT_PASSWORD_REQUIRED": "გთხოვთ გაიმეოროთ პაროლი",
+    "AUTH.PASSWORDS_MUST_MATCH": "პაროლები ერთმანეთს არ ემთხვევა"
+}

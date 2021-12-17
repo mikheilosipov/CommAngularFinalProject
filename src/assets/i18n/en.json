@@ -1,0 +1,14 @@
+{
+    "SHELL.TITLE": "Home",
+    "AUTH.SIGN_IN": "Sign In",
+    "AUTH.SIGN_UP": "Sign Up",
+    "AUTH.SIGN_OUT": "Sign Out",
+    "AUTH.EMAIL": "Email",
+    "AUTH.PASSWORD": "Password",
+    "AUTH.REPEAT_PASSWORD": "Repeat Password",
+    "AUTH.EMAIL_REQUIRED": "Email Required",
+    "AUTH.EMAIL_INVALID_FORMAT": "Invalid email format",
+    "AUTH.PASSWORD_REQUIRED": "Password Required",
+    "AUTH.REPEAT_PASSWORD_REQUIRED": "Repeat Password Required",
+    "AUTH.PASSWORDS_MUST_MATCH": "Passwords must match"
+}
