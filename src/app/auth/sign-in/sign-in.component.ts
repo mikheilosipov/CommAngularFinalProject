@@ -37,9 +37,10 @@ export class SignInComponent implements OnInit {
 
     from(this.auth.signIn({ email, password }))
       .pipe(finalize(() => this.loadingService.stop()))
-      .subscribe(() => {
-          this.router.navigate(['content']);
-        });
+      .subscribe({
+        next: () => this.router.navigate(['content']),
+        error: (error) => console.log(error['code'])
+      });
   }
 
   ngOnInit(): void {

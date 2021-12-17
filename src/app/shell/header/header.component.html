@@ -1,29 +1,36 @@
-<div>
-  <a href="#" class="navbar-brand d-flex align-items-center">
-    <!-- <img src="/assets/images/logo.svg" class="me-2" /> -->
-    <strong>{{ "SHELL.TITLE" | translate }}</strong>
-  </a>
-</div>
-<div>
-  <ng-container *ngIf="!isLoggedIn">
-    <button (click)="toSignIn()">
-        {{ "AUTH.SIGN_IN" | translate }}
-    </button>
-    <button (click)="toSignUp()">
-      {{ "AUTH.SIGN_UP" | translate }}
-    </button>
-  </ng-container>
-  <button *ngIf="isLoggedIn" (click)="signOut()" class="btn btn-danger">
-    {{ "AUTH.SIGN_OUT" | translate }}
-  </button>
-</div>
-<div>
-    <button (click)="toEn()" class="lang en" [class.inactive]="isKa"></button>
-    <button (click)="toKa()" class="lang ka" [class.inactive]="isEn"></button>
-</div>
-<!-- <div>
-    <select [(ngModel)]="selectedLocale" name="locale" (change)='onLocaleSelected()'>
-        <option [ngValue]="locale.En" class="lang en" [class.inactive]="isKa">English</option>
-        <option [ngValue]="locale.Ka" class="lang ka" [class.inactive]="isEn">Georgian</option>
-      </select>
-</div> -->
+<header>
+  <div class="navbar shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <img src="/assets/images/header-logo.svg" class="me-2" />
+        <strong>{{ "SHELL.TITLE" | translate }}</strong>
+      </a>
+      <div>
+        <div class="d-flex align-items-center">
+          <ng-container *ngIf="!isLoggedIn">
+            <button (click)="toSignIn()" class="btn btn-outline-secondary me-2">
+                {{ "AUTH.SIGN_IN" | translate }}
+            </button>
+            <button (click)="toSignUp()" class="btn btn-outline-secondary">
+              {{ "AUTH.SIGN_UP" | translate }}
+            </button>
+          </ng-container>
+          <button *ngIf="isLoggedIn" (click)="signOut()" class="btn btn-danger">
+            {{ "AUTH.SIGN_OUT" | translate }}
+          </button>
+          <div>
+            <button (click)="toEn()" class="lang en ms-2" [class.inactive]="isKa"></button>
+            <button (click)="toKa()" class="lang ka ms-2" [class.inactive]="isEn"></button>
+          </div>
+        </div>
+
+        <!-- <div>
+            <select [(ngModel)]="selectedLocale" name="locale" (change)='onLocaleSelected()'>
+                <option [ngValue]="locale.En" class="lang en" [class.inactive]="isKa">English</option>
+                <option [ngValue]="locale.Ka" class="lang ka" [class.inactive]="isEn">Georgian</option>
+              </select>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</header>
