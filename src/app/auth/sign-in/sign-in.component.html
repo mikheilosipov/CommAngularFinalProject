@@ -61,6 +61,13 @@
             {{ "AUTH.PASSWORD_REQUIRED" | translate }}
           </div>
         </ng-container>
+        <div
+          class="alert alert-danger mt-1"
+          role="alert"
+          *ngIf="isSignInError"
+        >
+          {{ "AUTH.SIGNIN_ERROR" | translate }}
+        </div>
       </form>
     </section>
   </main>

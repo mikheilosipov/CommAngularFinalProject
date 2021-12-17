@@ -17,6 +17,8 @@ export interface SignUpForm {
 })
 export class SignUpComponent implements OnInit {
 
+  isSignUpError?: boolean;
+
   constructor(
     private auth: AuthService, 
     private router: Router,
@@ -24,6 +26,9 @@ export class SignUpComponent implements OnInit {
     ) { }
 
   signUp(form: NgForm) {
+    
+    this.isSignUpError = false;
+
     if (form.invalid) {
       return;
     }
@@ -34,7 +39,10 @@ export class SignUpComponent implements OnInit {
       .pipe(finalize(() => this.loadingService.stop()))
       .subscribe({
         next: () => this.router.navigate(['content']),
-        error: (error) => console.log(error['code'])
+        error: (error) => {
+          console.log(error['code']);
+          this.isSignUpError = true;
+        }
       });
   }
   

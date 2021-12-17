@@ -18,7 +18,9 @@ export interface SignInForm {
 export class SignInComponent implements OnInit {
 
   formGroup!: FormGroup;
-  
+
+  isSignInError?: boolean;
+
   constructor(
     private auth: AuthService, 
     private router: Router,
@@ -26,6 +28,9 @@ export class SignInComponent implements OnInit {
     ) { }
 
   signIn({ email, password }: SignInForm) {
+
+    this.isSignInError = false;
+
     if (!email || !password) {
       return;
     }
@@ -36,10 +41,15 @@ export class SignInComponent implements OnInit {
     this.loadingService.start();
 
     from(this.auth.signIn({ email, password }))
-      .pipe(finalize(() => this.loadingService.stop()))
+      .pipe(
+        finalize(() => this.loadingService.stop())
+        )
       .subscribe({
         next: () => this.router.navigate(['content']),
-        error: (error) => console.log(error['code'])
+        error: (error) => {
+          console.log(error['code']);
+          this.isSignInError = true;
+        }
       });
   }
 

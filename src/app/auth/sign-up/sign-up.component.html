@@ -92,6 +92,13 @@
             {{ "AUTH.PASSWORDS_MUST_MATCH" | translate }}
           </div>
         </ng-container>
+        <div
+          class="alert alert-danger mt-1"
+          role="alert"
+          *ngIf="isSignUpError"
+        >
+          {{ "AUTH.SIGNUP_ERROR" | translate }}
+        </div>
       </form>
     </section>
   </main>

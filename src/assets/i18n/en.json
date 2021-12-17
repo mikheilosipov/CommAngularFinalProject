@@ -10,5 +10,7 @@
     "AUTH.EMAIL_INVALID_FORMAT": "Invalid email format",
     "AUTH.PASSWORD_REQUIRED": "Password Required",
     "AUTH.REPEAT_PASSWORD_REQUIRED": "Repeat Password Required",
-    "AUTH.PASSWORDS_MUST_MATCH": "Passwords must match"
+    "AUTH.PASSWORDS_MUST_MATCH": "Passwords must match",
+    "AUTH.SIGNIN_ERROR": "Authentification error",
+    "AUTH.SIGNUP_ERROR": "Registration Error"
 }

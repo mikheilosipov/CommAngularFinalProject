@@ -10,5 +10,7 @@
     "AUTH.EMAIL_INVALID_FORMAT": "ელ. ფოსტის ფორმატი არასწორია",
     "AUTH.PASSWORD_REQUIRED": "პაროლი სავალდებულოა",
     "AUTH.REPEAT_PASSWORD_REQUIRED": "გთხოვთ გაიმეოროთ პაროლი",
-    "AUTH.PASSWORDS_MUST_MATCH": "პაროლები ერთმანეთს არ ემთხვევა"
+    "AUTH.PASSWORDS_MUST_MATCH": "პაროლები ერთმანეთს არ ემთხვევა",
+    "AUTH.SIGNIN_ERROR": "აუტენტიფიკაციის შეცდომა",
+    "AUTH.SIGNUP_ERROR": "რეგისტრაციის შეცდომა"
 }
