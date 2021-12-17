@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { MustMatchDirective } from './directives/must-match.directive';
 import { ValidEmailFormatDirective } from './directives/valid-email-format.directive';
+import { LoadingSpinnerComponent } from './loading/loading-spinner/loading-spinner.component';
+import { LoadingComponent } from './loading/loading.component';
 
 
 
 @NgModule({
   declarations: [
     MustMatchDirective,
-    ValidEmailFormatDirective
+    ValidEmailFormatDirective,
+    LoadingSpinnerComponent,
+    LoadingComponent
   ],
   imports: [
     CommonModule
@@ -17,7 +21,8 @@ import { ValidEmailFormatDirective } from './directives/valid-email-format.direc
   exports: [
     TranslateModule,
     MustMatchDirective,
-    ValidEmailFormatDirective
+    ValidEmailFormatDirective,
+    LoadingComponent
   ]
 })
 export class SharedModule { }

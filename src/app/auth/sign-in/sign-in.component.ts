@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { finalize, from } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
+import { LoadingService } from 'src/app/services/loading.service';
 
 export interface SignInForm {
   email: string;
@@ -19,7 +21,8 @@ export class SignInComponent implements OnInit {
   
   constructor(
     private auth: AuthService, 
-    private router: Router
+    private router: Router,
+    private loadingService: LoadingService
     ) { }
 
   signIn({ email, password }: SignInForm) {
@@ -27,8 +30,16 @@ export class SignInComponent implements OnInit {
       return;
     }
 
-    this.auth.signIn({ email, password })
-              .then(() => this.router.navigate(['content']));
+    // this.auth.signIn({ email, password })
+    //           .then(() => this.router.navigate(['content']));
+    
+    this.loadingService.start();
+
+    from(this.auth.signIn({ email, password }))
+      .pipe(finalize(() => this.loadingService.stop()))
+      .subscribe(() => {
+          this.router.navigate(['content']);
+        });
   }
 
   ngOnInit(): void {
