@@ -12,5 +12,14 @@
     "AUTH.REPEAT_PASSWORD_REQUIRED": "Repeat Password Required",
     "AUTH.PASSWORDS_MUST_MATCH": "Passwords must match",
     "AUTH.SIGNIN_ERROR": "Authentification error",
-    "AUTH.SIGNUP_ERROR": "Registration Error"
+    "AUTH.SIGNUP_ERROR": "Registration Error",
+    "CONTENT.ADD_CITY": "Add City",
+    "CONTENT.WELCOME_TITLE": "Welcome to Weather Services Portal",
+    "CONTENT.WELCOME_MESSAGE_1": "You can add your favorite cities and see their weather conditions, air quality infirmation and etc.",
+    "CONTENT.WELCOME_MESSAGE_2": "Also you can leave your rating and reviews.",
+    "CONTENT.SEARCH": "Search",
+    "CONTENT.ENTER_CITY_NAME": "Enter city name",
+    "CONTENT.ERRORS.ENTER_CITY_NAME": "Enter city name"
+    
+    
 }

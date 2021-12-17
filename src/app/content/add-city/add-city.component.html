@@ -1,0 +1,55 @@
+<main>
+    <section class="py-3 text-center middle">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light text-primary">
+            {{ "CONTENT.ADD_CITY" | translate }}
+            </h1>
+        </div>
+    </section>
+
+    <div class="py-5">
+        <div class="container d-flex justify-content-center flex-column w-100">
+          <div class="row d-flex justify-content-center">
+            <div class="search-form d-flex justify-content-center flex-column">
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="searchKey"
+                placeholder="{{ 'CONTENT.ENTER_CITY_NAME' | translate }}"
+              />
+              <button class="btn btn-outline-secondary mt-2" (click)="search()">
+                {{ "CONTENT.SEARCH" | translate }}
+              </button>
+              <div
+                class="alert alert-danger mt-2"
+                role="alert"
+                *ngIf="searchHasError"
+              >
+                {{ "CONTENT.ERRORS.ENTER_CITY_NAME" | translate }}
+              </div>
+            </div>
+          </div>
+          <!-- <div class="row d-flex justify-content-center mt-2 flex-row mb-3">
+            <div class="d-flex justify-content-center">
+              <span
+                (click)="fetchMovie(name)"
+                class="badge rounded-pill bg-success ms-1"
+                *ngFor="let name of lastThreeSearches"
+                >{{ name }}</span
+              >
+            </div>
+          </div> -->
+    
+          <div *ngIf="selectedCity$ | async as selectedCity">
+            <h2>{{ selectedCity.key }}</h2>
+            <h2>{{ selectedCity.type }}</h2>
+            <h2>{{ selectedCity.localizedName }}</h2>
+            <h2>{{ selectedCity.englishName }}</h2>
+
+          </div>
+          <!-- <div *ngIf="selectedCity">
+            <h2>{{ selectedCity.key }}</h2>
+          </div> -->
+        </div>
+      </div>
+</main>

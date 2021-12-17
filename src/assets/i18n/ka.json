@@ -12,5 +12,12 @@
     "AUTH.REPEAT_PASSWORD_REQUIRED": "გთხოვთ გაიმეოროთ პაროლი",
     "AUTH.PASSWORDS_MUST_MATCH": "პაროლები ერთმანეთს არ ემთხვევა",
     "AUTH.SIGNIN_ERROR": "აუტენტიფიკაციის შეცდომა",
-    "AUTH.SIGNUP_ERROR": "რეგისტრაციის შეცდომა"
+    "AUTH.SIGNUP_ERROR": "რეგისტრაციის შეცდომა",
+    "CONTENT.ADD_CITY": "ქალაქის დამატება",
+    "CONTENT.WELCOME_TITLE": "მოგესალმებით ამინდის სერვისების პორტალზე",
+    "CONTENT.WELCOME_MESSAGE_1": "თქვენ შეგიძლიათ დაამატოთ თქვენი საყვარელი ქალაქები და ნახოთ მათი ამინდის პირობები, ინფორმაცია ჰაერის ხარისხის შესახელი და სხვა.",
+    "CONTENT.WELCOME_MESSAGE_2": "ასევე თქვენ შეგიძლიათ დატოვოთ თქვენი შეფასებებეი და მიმოხილვები.",
+    "CONTENT.SEARCH": "ძებნა",
+    "CONTENT.ENTER_CITY_NAME": "შეიყვანეთ ქვეყნის სახელი",
+    "CONTENT.ERRORS.ENTER_CITY_NAME": "შეიყვანეთ ქვეყნის სახელი"
 }

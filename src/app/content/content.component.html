@@ -1,1 +1,20 @@
-<p>content works!</p>
+<main>
+    <section class="py-5 text-center middle">
+      <div class="col-lg-10 col-md-8 mx-auto">
+        <h1 class="fw-light text-primary">{{ "CONTENT.WELCOME_TITLE" | translate }}</h1>
+        <p class="lead text-primary">
+          {{ "CONTENT.WELCOME_MESSAGE_1" | translate }}
+          <br>
+          {{ "CONTENT.WELCOME_MESSAGE_2" | translate }}
+        </p>
+        <p>
+          <a class="btn btn-outline-primary" routerLink="add">{{ "CONTENT.ADD_CITY" | translate }}</a>
+        </p>
+      </div>
+    </section>
+  
+    <section>
+      <app-city-list></app-city-list>
+    </section>
+  </main>
+  
