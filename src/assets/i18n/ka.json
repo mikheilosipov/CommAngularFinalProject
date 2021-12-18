@@ -19,5 +19,8 @@
     "CONTENT.WELCOME_MESSAGE_2": "ასევე თქვენ შეგიძლიათ დატოვოთ თქვენი შეფასებებეი და მიმოხილვები.",
     "CONTENT.SEARCH": "ძებნა",
     "CONTENT.ENTER_CITY_NAME": "შეიყვანეთ ქალაქის სახელი",
-    "CONTENT.ERRORS.ENTER_CITY_NAME": "შეიყვანეთ ქალაქის სახელი"
+    "CONTENT.ERRORS.ENTER_CITY_NAME": "შეიყვანეთ ქალაქის სახელი",
+    "CONTENT.CURRENT_CONDITIONS": "მიმდინარე პირობები",
+    "CONTENT.TEMPERATURE": "ტემპერატურა:",
+    "CONTENT.WEATHER": "ამინდი:"
 }

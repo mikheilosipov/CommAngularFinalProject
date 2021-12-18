@@ -6,7 +6,7 @@ export const environment = {
   accuWeather: {
     apiKey: 'QxsLy6zC1HAeiiAu4SUYtXK7QAW8Psa1',
     locationsApiBase: 'http://dataservice.accuweather.com/locations/v1',
-    currentConditions: 'http://dataservice.accuweather.com/currentconditions/v1'
+    currentConditionsApiBase: 'http://dataservice.accuweather.com/currentconditions/v1'
   },
   firebaseConfig: {
     projectId: 'commangularfinalproject',

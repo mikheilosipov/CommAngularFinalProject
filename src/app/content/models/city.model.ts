@@ -1,3 +1,5 @@
+import { WeatherConditionViewModel } from ".";
+
 export interface Region {
     ID: string;
     LocalizedName: string;
@@ -24,4 +26,6 @@ export interface CityViewModel {
     type: string;
     localizedName: string;
     englishName: string;
+
+    weatherCondition?: WeatherConditionViewModel;
 }

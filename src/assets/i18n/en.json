@@ -19,7 +19,10 @@
     "CONTENT.WELCOME_MESSAGE_2": "Also you can leave your rating and reviews.",
     "CONTENT.SEARCH": "Search",
     "CONTENT.ENTER_CITY_NAME": "Enter city name",
-    "CONTENT.ERRORS.ENTER_CITY_NAME": "Enter city name"
+    "CONTENT.ERRORS.ENTER_CITY_NAME": "Enter city name",
+    "CONTENT.CURRENT_CONDITIONS": "Current conditions",
+    "CONTENT.TEMPERATURE": "Temperature:",
+    "CONTENT.WEATHER": "Weather"
     
     
 }

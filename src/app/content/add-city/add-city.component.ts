@@ -41,7 +41,7 @@ export class AddCityComponent implements OnInit {
 
   fetchCity(title: string) {
     this.selectedCity$ = this.facade.fetchCity(title);
-    this.selectedCity$.subscribe((city) => console.log(city));
+    //this.selectedCity$.subscribe((city) => console.log(city));
 
     // this.selectedCity = {
     //   key: "city.Key",

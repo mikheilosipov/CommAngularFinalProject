@@ -9,7 +9,7 @@ import { AddCityComponent } from './add-city/add-city.component';
 import { CityListComponent } from './city-list/city-list.component';
 import { CityDetailsComponent } from './city-details/city-details.component';
 import { CityListItemComponent } from './city-list/city-list-item/city-list-item.component';
-import { CityApiService } from './services';
+import { CityApiService, WeatherConditionsApiService } from './services';
 
 
 @NgModule({
@@ -27,7 +27,8 @@ import { CityApiService } from './services';
     ContentRoutingModule
   ],
   providers: [
-    CityApiService
+    CityApiService,
+    WeatherConditionsApiService
   ]
 })
 export class ContentModule { }

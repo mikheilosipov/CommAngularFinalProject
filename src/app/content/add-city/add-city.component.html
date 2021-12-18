@@ -41,11 +41,14 @@
           </div> -->
     
           <div *ngIf="selectedCity$ | async as selectedCity">
-            <h2>{{ selectedCity.key }}</h2>
-            <h2>{{ selectedCity.type }}</h2>
             <h2>{{ selectedCity.localizedName }}</h2>
             <h2>{{ selectedCity.englishName }}</h2>
-
+            <div>{{ selectedCity.key }}</div>
+            <div>{{ selectedCity.type }}</div>
+            <h2>{{ "CONTENT.CURRENT_CONDITIONS" | translate }}</h2>
+            <div>{{ "CONTENT.TEMPERATURE" | translate }} {{ selectedCity.weatherCondition?.Temperature?.Metric?.Value }}</div>
+            <div>{{ "CONTENT.WEATHER" | translate }} <img [src]="selectedCity.weatherCondition?.WeatherIconUrl" class="weather-condition-icon"/></div>
+            
           </div>
           <!-- <div *ngIf="selectedCity">
             <h2>{{ selectedCity.key }}</h2>
